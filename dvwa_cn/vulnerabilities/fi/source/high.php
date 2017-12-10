@@ -1,0 +1,11 @@
+<?php
+		
+	$file = $_GET['page']; //The page we wish to display 
+
+	// Only allow include.php
+	if ( $file != "include.php" ) {
+		echo "´íÎó: ÎÄ¼þÎ´ÕÒµ½£¡";
+		exit;
+	}
+		
+?>

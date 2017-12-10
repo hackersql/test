@@ -1,0 +1,108 @@
+<div class="page-title" style="padding:10px;width:75%;margin-left:auto;margin-right:auto;text-align:center;">Mutillidae: Deliberately Vulnerable PHP Scripts Of OWASP Top 10</div>
+
+<div style="font-family: Arial;">
+
+	<p class="label">Latest Version</p>
+	<div style="padding-left: 40px;">
+		The latest version of Mutillidae is available from <a href="http://www.irongeek.com/i.php?page=security/mutillidae-deliberately-vulnerable-php-owasp-top-10" target="_blank">www.irongeek.com</a>
+	</div>
+	
+	<p class="label">Installation Instructions</p>
+	<div style="padding-left: 40px;">
+		<a href="http://localhost/mutillidae/index.php?page=installation.php">Installation Instructions</a>
+	</div>
+	<div>&nbsp;</div>
+	
+	<div class="label">Usage Instructions</div>
+	<span style="white-space: pre">
+		Mutillidae implements the <a href="http://www.owasp.org/index.php/OWASP_Top_Ten_Project" target="_blank">OWASP Top 10</a> in PHP.
+		
+		Go to the <a href="http://www.owasp.org/index.php/OWASP_Top_Ten_Project" target="_blank">OWASP Top 10</a> page to read about a vulnerability, then choose it from 
+		the list on the left to try it out. Hints may help.
+	
+		Mutillidae currently has two modes: secure and insecure (default). In insecure mode, the 
+		project works like Mutillidae 1.0. Pages are vulnerable to at least the topic they 
+		fall under in the menu. Most pages are vulnerable to much more. In secure mode, 
+		Mutillidae attempts to protect the pages with server side scripts. Also, hints are disabled in
+		secure mode. In the interest of makign as many challenges as possible, this can be defeated. 
+	
+		In Mutillidae 2.0, the code has been commented to allow the user to see how the defense works.
+		To get the most out of the project, avoid reading the source code until after learning how
+		to exploit it. But if you get stuck, the comments should help. Learning how the attack
+		works should help to understand the defense.
+	</span>
+	<div>&nbsp;</div>
+	
+	<div class="label">PHP Errors</div>
+	<span style="white-space: pre">
+		Get rid of PHP "strict" errors. They are not compatible with the OWASP ESAPI classes in use in Mutillidae 2.0. The
+		error modifies headers disrupting functionality so this is not simply an annoyance issue. 
+		To do this, go to the PHP.INI file and change the line that reads "error_reporting = E_ALL | E_STRICT" to 
+		"error_reporting = E_ALL & ~E_NOTICE & ~E_WARNING & ~E_DEPRECIATED". Once the modification is complete,
+		restart the Apache service. If you are not sure how to restart the service, reboot.
+		
+		Important note: If you use XAMPP Lite or various version of XAMPP on various operating systems, the path for your 
+		php.ini file may vary. You may even have multiple php.ini files in which case try to modify the one in the Apache
+		directory first, then the one in the PHP file if that doesnt do the trick.
+		
+		Windows possible default location C:\xampp\php\php.ini, C:\XamppLite\PHP\php.ini, others
+		Linux possible default locations: /XamppLite/PHP/php.ini, /XamppLite/apache/bin/php.ini, others 
+	</span>
+	
+	<div>&nbsp;</div>
+	<div class="label">Notes</div>
+	<ul>
+		<li>Created by <a href="http://Irongeek.com">Irongeek.com</a>.</li>
+		<li>If you would like to learn about other deliberately vulnerable web 
+			applications, check out <a href="http://www.irongeek.com/i.php?page=security/deliberately-insecure-web-applications-for-learning-web-app-security">
+			Deliberately Insecure Web Applications For Learning Web App Security</a>. 
+		</li>
+		<li>If you would like to help in writing the hints sections, please
+			<a href="http://www.irongeek.com/i.php?page=contact">email</a>. Your name 
+			and a link to your site will be added to the credits page.
+		</li>
+		<li><u><font color="#FF0000">Do NOT&nbsp; run this code on a production network</font></u>. Either run it on a 
+		private network, or restrict your web server software to only use the local 
+		loopback address. By default Mutillidae only allows access from localhost 
+		(127.*.*.*). Edit the .htaccess file to change this behavior (not recommended on a public network). 
+		If for some reason .htaccess is not parsed you can 
+		restrict the IP by finding the &quot;Listen&quot; line in the http.conf file and changing 
+		it to read: <font color="#008080">Listen 127.0.0.1:80</font>
+		</li>
+	</ul>
+	
+	<div>&nbsp;</div>
+	<div style="margin-left: auto;margin-right: auto;width:500px">
+		<table>
+			<tr>
+				<td colspan="2" style="text-align: center;" class="report-header">
+					Samurai WTF and Backtrack contains all the tools needed or you may build your own collection	
+				</td>
+			</tr>
+			<tr>
+				<td style="text-align: center;" class="label">
+					<a href="http://www.backtrack-linux.org/" target="_blank">
+						<img alt="Backtrack" style="border-width:0px;" width="90px" height="69px" src="./images/backtrack-4-r2-logo-90-69.png" />
+					</a>
+					<div>Backtrack</div>		
+				</td>
+				<td style="text-align: center;" class="label">
+					<a href="http://samurai.inguardians.com/" target="_blank">
+						<img alt="Samurai Web Testing Framework" style="border-width:0px;" width="160px" height="107px" src="./images/samurai-wtf-logo-320-214.jpeg" />
+					</a>
+					<div>Samurai Web Testing Framework</div>
+				</td>
+			</tr>
+		</table>
+	
+		<a href="http://www.eclipse.org/pdt/" target="_blank" style="margin-right:10px;">
+			<img alt="Eclipse PDT" style="border-width: 0px;" height="100px" width="100px" src="./images/bui_eclipse_pos_logo_fc_med.jpg" />
+		</a>
+		<a href="http://www.php.net/" target="_blank" style="margin-left:30px;">
+			<img alt="PHP-MySQL" style="border-width: 0px;" height="88px" width="100px" src="./images/php-mysql-logo-176-200.jpeg" />
+		</a>
+		<a href="http://www.quest.com/toad-for-mysql/" target="_blank" style="margin-left:30px;">
+			<img alt="PHP-MySQL" style="border-width: 0px;" height="80px" width="77px" src="./images/toad-for-mysql-77-80.jpg" />
+		</a>			
+	</div>
+</div>
