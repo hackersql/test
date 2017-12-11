@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+ <head>
+  <link rel="stylesheet" type="text/css" href="/w3af/default.css" title="default" />
+  <title>OS Commanding tests</title>
+ </head>
+
+ <body>
+ <div id="body">
+
+ <h1 id="os">
+	OS Commanding
+ </h1>
+    <ol>
+
+     <li>
+        Simplest OS Commanding (<a href="simple_osc.php?cmd=ls">simple_osc.php?cmd=ls</a>)<br/>
+     </li>
+
+     <li>
+        OS Commanding in a parameter (<a href="param_osc.php?param=/etc/passwd">param_osc.php?param=/etc/passwd</a>)<br/>
+     </li>
+
+     <li>
+        Execution using passthru function (<a href="passthru.php?cmd=ls">passthru.php?cmd=ls</a>)<br/>
+     </li>
+
+    </ol>
+
+
+ <h1 id="os_blind">
+	Blind OS Commanding
+ </h1>
+    <ol>
+
+     <li>
+        The result of the command isn't echoed (@exec) (<a href="blind_osc.php?cmd=ls">blind_osc.php?cmd=ls</a>)<br/>
+     </li>
+
+
+    </ol>
+
+ </div id="body">
+ </body>
+</html>

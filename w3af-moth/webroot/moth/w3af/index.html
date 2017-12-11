@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+ <head>
+  <link rel="stylesheet" type="text/css" href="/w3af/default.css" title="default" />
+  <title>w3af tests</title>
+ </head>
+
+ <body>
+ <div id="body">
+
+<img id=logo src='/images/w3af.png' alt="w3af">
+
+<br/>
+<br/>
+<br/>
+
+This file contains links to all test scripts and files used by the w3af framework to perform unit tests. If you find any problem with these scripts, or you discover that w3af is not able to detect one type of XSS, Blind SQL injection, etc. please report a bug <a href="http://sourceforge.net/tracker/?group_id=170274&atid=853652">here</a>.<br/>
+
+ <h1 id="audit">
+     Audit plugins
+ </h1>
+    Audit plugins find the vulnerabilities in the web application, examples of vulnerabilities found by this type of plugins are SQL injections and Cross site scripting. <a href="audit/">Click here</a> to go to the audit plugin test section.<br/>
+
+ <h1 id="grep">
+     Grep plugins
+ </h1>
+    Grep plugins analyze requests and responses performed by other plugins,
+ and try to find interesting information on them. <a href="grep/">Click
+    here</a> to go to the grep plugin test section.<br/>
+
+ <h1 id="crawl">
+     Tests related to crawl/infrastructure plugins
+ </h1>
+	<a href="crawl/">crawl/</a><br/>
+	<a href="infrastructure/">infrastructure/</a><br/>
+
+ <h1 id="bruteforce">
+     Tests related to bruteforce plugins
+ </h1>
+    Bruteforce plugins identify login forms, and protected resources (HTTP 401) in the web application
+ and use a dictionary to try to obtain a valid username and password. <a
+    href="bruteforce/">Click here</a> to go to the bruteforce plugin test section.<br/>
+
+ <h1 id="mangle">
+     Mangle plugins
+ </h1>
+    Mangle plugins modify the request and response on the fly. <a href="mangle/">Click here</a> to go to the mangle plugin test section.<br/>
+
+ <h1 id="misc">
+     Framework Core tests
+ </h1>
+	<a href="core/time_analysis/analyze.php?a=11111">analyze.php?a=11111</a><br/>
+	<a href="core/pdfParser/1.pdf">pdf support</a> <br/>
+	<a href="core/fuzzFileContent/">Fuzz file content test.</a><br/>
+	<a href="core/magicQuotes/magicQuotes.php?gpc=pipipi">GPC magic quotes</a> <br/>
+	<a href="core/maxFileSize/">MAX file size test of xurllib.</a> <br/>
+
+
+</div id="body">
+</body>
+</html>

