@@ -1,0 +1,7 @@
+命令执行函数
+system($_GET["cmd"]);
+echo exec('dir');
+文件包含函数
+include($_GET['page']);
+include('dvws/'.$_GET['page'].'.php');//包含文件后面不加后缀名
+include('dvws/'.addslashes($_GET['page']).'.php');
