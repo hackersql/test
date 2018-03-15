@@ -17,10 +17,10 @@ $_DVWA = array();
 $_DVWA[ 'db_server' ] = 'localhost';
 $_DVWA[ 'db_database' ] = 'dvwa';
 $_DVWA[ 'db_user' ] = 'root';
-$_DVWA[ 'db_password' ] = 'root';
+$_DVWA[ 'db_password' ] = '';
 
 # Only needed for PGSQL
-$_DVWA[ 'db_port' ] = '5432'; 
+$_DVWA[ 'db_port' ] = '3306'; 
 
 # ReCAPTCHA Settings
 # Get your keys at https://www.google.com/recaptcha/admin/create
