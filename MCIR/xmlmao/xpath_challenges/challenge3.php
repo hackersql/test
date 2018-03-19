@@ -24,15 +24,15 @@ You should have received a copy of the GNU General Public License along with thi
 	<hr width="40%">
 <div id="challenge">
 	
-You must perform an XPath injection attack in a string field. Only one value is returned.<br>
+您必须在字符串字段中执行XPath注入攻击。 只有一个值被返回。<br>
 <br>
-Your objective is to pull the social security numbers from the XML document.
+您的目标是从XML文档中提取社会安全号码。
 
 <pre>
-PARAMETERS:
-Injection Type - String value in condition
-Sanitization - None
-Output - One result, generic errors, query not shown
+参数：
+注入类型 - 条件为字符串值
+过滤 - 无
+输出 - 一个结果，通用错误，查询不显示
 </pre>
 
 </div>
@@ -40,8 +40,8 @@ Output - One result, generic errors, query not shown
 	<input type="hidden" name="query_results" value="one_row"/>
 	<input type="hidden" name="location" value="condition_string"/>
 	<input type="hidden" name="error_level" value="generic"/>
-	Injection String: <input type="text" name="inject_string"/><br>
-	<input type="submit" name="submit" value="Inject!"/>
+	注射字符串: <input type="text" name="inject_string"/><br>
+	<input type="submit" name="submit" value="注入!"/>
 </form>
 <br>
 </body>

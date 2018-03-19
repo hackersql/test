@@ -133,13 +133,13 @@ if(isset($_REQUEST['submit'])){
 
 	switch ($_REQUEST['query_results']){
 		case 'all_rows':
-			echo '<b>Results:</b>';
+			echo '<b>结果:</b>';
 			foreach ($xml->data as $data){
 				echo '<br>'.$data;
 			}
 			break;
 		case 'one_row':
-			echo '<b>Results:</b><br>';
+			echo '<b>结果:</b><br>';
 			echo $xml->data[0];
 			break;
 		case 'bool':

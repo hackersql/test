@@ -24,15 +24,15 @@ You should have received a copy of the GNU General Public License along with thi
 	<hr width="40%">
 <div id="challenge">
 	
-You must perform a very basic XPath injection attack.<br>
+您必须执行非常基本的XPath注入攻击。<br>
 <br>
-Your objective is to get the query to return the entire set of nodes in the XML document.
+您的目标是让查询返回XML文档中的整个节点集。
 
 <pre>
-PARAMETERS:
-Injection Type - String value in condition
-Sanitization - None
-Output - All results, query shown
+参数：
+注入类型 - 条件为String字符串值
+过滤 - 无
+输出 - 显示所有结果
 </pre>
 
 </div>

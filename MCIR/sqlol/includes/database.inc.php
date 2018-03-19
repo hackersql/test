@@ -39,12 +39,12 @@ if (!$results){
 } else {
 	if(isset($_REQUEST['query_results'])) switch($_REQUEST['query_results']){
 		case 'one_row':
-			print('<b>Results:</b><br>');
+			print('<b>结果:</b><br>');
 			print_r($results->fields);
 			print("\n<br>");
 			break;
 		case 'all_rows':
-			print('<b>Results:</b><br>');
+			print('<b>结果:</b><br>');
 			while(!$results->EOF){
 				print_r($results->fields);
 				print("\n<br>");
@@ -52,7 +52,7 @@ if (!$results){
 			}
 			break;
 		case 'bool':
-			print('<b>Results:</b><br>');
+			print('<b>结果:</b><br>');
 			if(!$results->EOF) print "Got results!\n";
 			break;
 	}

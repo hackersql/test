@@ -24,19 +24,19 @@ You should have received a copy of the GNU General Public License along with thi
 include('includes/nav.inc.php');
 include('../includes/options.inc.php');
 ?>
-	<tr><td><b>Injection Location:</b></td><td>
+	<tr><td><b>注入位置:</b></td><td>
 		<select name="location">
-			<option value="condition_string">String Value in Condition</option>
-			<option value="condition_num" <?php echo (isset($_REQUEST['location']) and $_REQUEST['location']=='condition_num') ? 'selected' : ''; ?>>Numeric Value in Condition</option>
-			<option value="node_path" <?php echo (isset($_REQUEST['location']) and $_REQUEST['location']=='node_path') ? 'selected' : ''; ?>>Node Path</option>
-			<option value="node_name" <?php echo (isset($_REQUEST['location']) and $_REQUEST['location']=='node_name') ? 'selected' : ''; ?>>Node Name</option>
-			<option value="condition_var" <?php echo (isset($_REQUEST['location']) and $_REQUEST['location']=='condition_var') ? 'selected' : ''; ?>>Condition Variable</option>
-			<option value="sub_node" <?php echo (isset($_REQUEST['location']) and $_REQUEST['location']=='sub_node') ? 'selected' : ''; ?>>Child Node</option>
+			<option value="condition_string">条件为String字符串值</option>
+			<option value="condition_num" <?php echo (isset($_REQUEST['location']) and $_REQUEST['location']=='condition_num') ? 'selected' : ''; ?>>条件为int数值型</option>
+			<option value="node_path" <?php echo (isset($_REQUEST['location']) and $_REQUEST['location']=='node_path') ? 'selected' : ''; ?>>节点路径</option>
+			<option value="node_name" <?php echo (isset($_REQUEST['location']) and $_REQUEST['location']=='node_name') ? 'selected' : ''; ?>>节点名</option>
+			<option value="condition_var" <?php echo (isset($_REQUEST['location']) and $_REQUEST['location']=='condition_var') ? 'selected' : ''; ?>>条件为$变量</option>
+			<option value="sub_node" <?php echo (isset($_REQUEST['location']) and $_REQUEST['location']=='sub_node') ? 'selected' : ''; ?>>子节点</option>
 		</select></td></tr>
-		<tr><td>Custom XPath query (*INJECT* specifies injection point):</td><td><textarea name="custom_inject"><?php echo isset($_REQUEST['custom_inject']) ? htmlentities($_REQUEST['custom_inject']) : ''; ?></textarea></td></tr>
+		<tr><td>自定义XPath查询（*INJECT*指定注入点）:</td><td><textarea name="custom_inject"><?php echo isset($_REQUEST['custom_inject']) ? htmlentities($_REQUEST['custom_inject']) : ''; ?></textarea></td></tr>
 	<tr><td><br/></td><td></td></tr>
 	</table>
-	<input type="submit" id="submit" name="submit" value="Inject!">
+	<input type="submit" id="submit" name="submit" value="注入!">
 </form>
 <div id="results">
 
@@ -92,14 +92,14 @@ if(isset($_REQUEST['submit'])){
 	
 	$results = '';
 	
-	if(isset($_REQUEST['show_query']) and $_REQUEST['show_query'] == 'on') echo '<b>Executed query:</b><br> ' . $display_query . '<br><br>';
+	if(isset($_REQUEST['show_query']) and $_REQUEST['show_query'] == 'on') echo '<b>执行查询:</b><br> ' . $display_query . '<br><br>';
 
 	if(isset($_REQUEST['error_level'])){
 		switch ($_REQUEST['error_level']){
 			case 'generic':
 				ini_set('display_errors', 0);
 				$results = $xml->xpath($query);
-				if($results == FALSE) echo "<b>An error occurred.</b>" . "\n<br>";
+				if($results == FALSE) echo "<b>An error occurred 发生错误</b>" . "\n<br>";
 				break;
 			case 'verbose':
 				ini_set('display_errors', 1);
@@ -116,16 +116,16 @@ if(isset($_REQUEST['submit'])){
 	if($results){
 		switch($_REQUEST['query_results']){
 			case 'all_rows':
-				print('<b>Results:</b><br><pre>');
+				print('<b>结果:</b><br><pre>');
 				print_r($results);
 				print('</pre>');
 				break;
 			case 'one_row':
-				print('<b>Results:</b><br>');
+				print('<b>结果:</b><br>');
 				print($results[0]);
 				break;
 			case 'bool':
-				if($results[0]) echo "<b>Results:</b><br>Got results!";
+				if($results[0]) echo "<b>结果:</b><br>Got results!";
 				break;
 		}
 	}

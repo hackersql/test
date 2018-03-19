@@ -17,22 +17,22 @@ You should have received a copy of the GNU General Public License along with thi
 <link rel="stylesheet" type="text/css" href="../../includes/mcir.css">
 </head>
 <body>
-	<center><h1>XMLmao - XPath Challenge 2 - The Failure of Quote Filters</h1></center><br>
+	<center><h1>XMLmao - XPath Challenge 2 - 过滤单引号失败</h1></center><br>
 
 	<hr width="40%">
 	<hr width="60%">
 	<hr width="40%">
 <div id="challenge">
 	
-You must perform an XPath injection attack in a numeric field without the use of single quotes.<br>
+您必须在数字字段中执行XPath注入攻击，而不使用单引号.<br>
 <br>
-Your objective is to get the query to return the entire XML document.
+您的目标是让查询返回整个XML文档.
 
 <pre>
-PARAMETERS:
-Injection Type - String value in condition
-Sanitization - Single quotes removed
-Output - All results, verbose errors, query shown
+参数：
+注入类型 - 条件为字符串值
+过滤 - 删除单引号
+输出 - 显示所有查询结果，详细错误.
 </pre>
 
 </div>
@@ -44,8 +44,8 @@ Output - All results, verbose errors, query shown
 	<input type="hidden" name="sanitization_params" value="'">
 	<input type="hidden" name="sanitization_type" value="keyword">
 	<input type="hidden" name="error_level" value="verbose"/>
-	Injection String: <input type="text" name="inject_string"/><br>
-	<input type="submit" name="submit" value="Inject!"/>
+	注入字符串: <input type="text" name="inject_string"/><br>
+	<input type="submit" name="submit" value="注入!"/>
 </form>
 <br>
 </body>

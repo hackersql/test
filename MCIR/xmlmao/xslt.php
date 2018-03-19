@@ -132,16 +132,16 @@ if(isset($_REQUEST['submit'])){
 	if($output){
 		switch($_REQUEST['query_results']){
 			case 'all_rows':
-				echo '<b>Results:</b><br/>';
+				echo '<b>结果:</b><br/>';
 				echo $output;
 				break;
 			case 'one_row':
-				echo '<b>Results:</b><br/>';
+				echo '<b>结果:</b><br/>';
 				echo "This level of output verbosity does not make sense in the context of XSLT injection. Providing full output.\n<br>";
 				echo $output;
 				break;
 			case 'bool':
-				echo '<b>Results:</b><br/>';
+				echo '<b>结果:</b><br/>';
 				echo "This level of output verbosity does not make sense in the context of XSLT injection. Providing full output.\n<br>";
 				echo $output;
 				break;
