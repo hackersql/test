@@ -30,9 +30,9 @@ Your objective is to cause an alert box to pop up on the resulting page.<br>
 (Note: Some browsers have anti-XSS protections which prevent this from working. Try using Firefox, Safari, or old versions of Internet Explorer.)
 
 <pre>
-PARAMETERS:
-Injection Type - Insertion into string in Javascript
-Sanitization - Double quotes rejected
+参数:
+注入类型: - Insertion into string in Javascript
+过滤: - Double quotes rejected
 </pre>
 
 </div>
@@ -41,8 +41,8 @@ Sanitization - Double quotes rejected
       <input type="hidden" name="sanitization&#95;level" value="reject&#95;high" />
       <input type="hidden" name="sanitization&#95;params" value="&quot;" />
       <input type="hidden" name="sanitization&#95;type" value="keyword" />
-	Injection String: <input type="text" name="inject_string"/><br>
-	<input type="submit" name="submit" value="Inject!"/>
+	注入字符串: <input type="text" name="inject_string"/><br>
+	<input type="submit" name="submit" value="注入!"/>
 </form>
 <br>
 </body>

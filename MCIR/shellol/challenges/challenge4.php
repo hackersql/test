@@ -30,11 +30,11 @@ You must perform a shell injection attack without launching an addtional command
 Your objective is to discover the full path to the shellol application.
 
 <pre>
-PARAMETERS:
+参数:
 Injection Location - Command argument
 Method - GET
-Sanitization - Reject(high), no semicolons, ampersands, pipes, backticks, newlines, parens
-Output - output shown, error status disclosed, command shown
+过滤: - Reject(high), no semicolons, ampersands, pipes, backticks, newlines, parens
+输出 - output shown, error status disclosed, command shown
 </pre>
 
 </div>
@@ -47,8 +47,8 @@ Output - output shown, error status disclosed, command shown
         <input type="hidden" name="show_query" value="on"/>
 	<input type="hidden" name="custom_inject" value="echo Hello *INJECT*"/>
 	<input type="hidden" name="location" value="argument"/>
-	Injection String: <input type="text" name="inject_string"/><br>
-	<input type="submit" name="submit" value="Inject!"/>
+	注入字符串: <input type="text" name="inject_string"/><br>
+	<input type="submit" name="submit" value="注入!"/>
 </form>
 <br>
 </body>

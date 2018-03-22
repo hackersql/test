@@ -30,16 +30,16 @@ Your objective is to change the action of the resulting form to point to a diffe
 (Note: Some browsers have anti-XSS protections which prevent this from working. Try using Firefox, Safari, or old versions of Internet Explorer.)
 
 <pre>
-PARAMETERS:
-Injection Type - Injection into HTML body
-Sanitization - None
+参数:
+注入类型: - Injection into HTML body
+过滤: - None
 </pre>
 
 </div>
 <form action="../xss.php" method="get" name="challenge_form">
 	<input type="hidden" name="custom_inject" value="<form action=&quot;xss.php&quot; name=&quot;xssform&quot;>Enter password:<input type=&quot;password&quot; name=&quot;password&quot; /><input type=&quot;submit&quot; /></form>*INJECT*" />
-	Injection String: <input type="text" name="inject_string"/><br>
-	<input type="submit" name="submit" value="Inject!"/>
+	注入字符串: <input type="text" name="inject_string"/><br>
+	<input type="submit" name="submit" value="注入!"/>
 </form>
 <br>
 </body>

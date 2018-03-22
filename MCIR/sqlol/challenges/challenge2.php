@@ -29,12 +29,12 @@ Many people sanitize or remove single quotes in their Web applications to preven
 Your objective is to find the table of social security numbers present in the database and extract its information.
 
 <pre>
-PARAMETERS:
+参数:
 Query Type - SELECT query
-Injection Type - Integer value in WHERE clause
+注入类型: - Integer value in WHERE clause
 Method - GET
-Sanitization - Single quotes removed
-Output - All results, verbose error messages, query shown
+过滤: - Single quotes removed
+输出 - 所有结果, verbose error messages, query shown
 </pre>
 
 </div>
@@ -46,8 +46,8 @@ Output - All results, verbose error messages, query shown
 	<input type="hidden" name="error_level" value="verbose"/>
 	<input type="hidden" name="show_query" value="on"/>
 	<input type="hidden" name="location" value="where_int"/>
-	Injection String: <input type="text" name="inject_string"/><br>
-	<input type="submit" name="submit" value="Inject!"/>
+	注入字符串: <input type="text" name="inject_string"/><br>
+	<input type="submit" name="submit" value="注入!"/>
 </form>
 <br>
 </body>

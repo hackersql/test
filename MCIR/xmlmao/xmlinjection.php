@@ -23,21 +23,21 @@ You should have received a copy of the GNU General Public License along with thi
 include('includes/nav.inc.php');
 include('../includes/options.inc.php');
 ?>
-	<tr><td>Injection Location:</td><td>
+	<tr><td>注入位置:</td><td>
 		<select name="location">
 			<option value="attribute">Attribute</option>
 			<option value="value" <?php echo (isset($_REQUEST['location']) and $_REQUEST['location']=='value') ? 'selected' : ''; ?>>Node Value</option>
 			<option value="cdatavalue" <?php echo (isset($_REQUEST['location']) and $_REQUEST['location']=='cdatavalue') ? 'selected' : ''; ?>>CDATA-wrapped Value</option>
 			<option value="header_value" <?php echo (isset($_REQUEST['location']) and $_REQUEST['location']=='header_value') ? 'selected' : ''; ?>>Header Value</option>
 		</select></td></tr>
-		<tr><td>Custom XML (*INJECT* specifies injection point):</td><td><textarea name="custom_inject"><?php echo (isset($_REQUEST['custom_inject']) ? htmlentities($_REQUEST['custom_inject']) : '' ); ?></textarea></td></tr>
-		<tr><td><b>Parser options:</b></td></tr>
-                <tr><td>Load external DTD?</td><td><input type='checkbox' name='ext_dtd' <?php echo (isset($_REQUEST['ext_dtd']) ?'checked' : ''); ?>></td></tr>
-                <tr><td>Validate with the DTD?</td><td><input type='checkbox' name='valid_dtd' <?php echo (isset($_REQUEST['valid_dtd']) ?'checked' : ''); ?>></td></tr>
-                <tr><td>Substitute entities?</td><td><input type='checkbox' name='subs_ent' <?php echo (isset($_REQUEST['subs_ent']) ?'checked' : ''); ?>></td></tr>
-                <tr><td>Enable XInclude?</td><td><input type='checkbox' name='xinclude' <?php echo (isset($_REQUEST['xinclude']) ? 'checked' : ''); ?>></td></tr>
+		<tr><td>自定义 XML (*INJECT* 指定注入点):</td><td><textarea name="custom_inject"><?php echo (isset($_REQUEST['custom_inject']) ? htmlentities($_REQUEST['custom_inject']) : '' ); ?></textarea></td></tr>
+		<tr><td><b>解析器选项:</b></td></tr>
+                <tr><td>加载外部 DTD?</td><td><input type='checkbox' name='ext_dtd' <?php echo (isset($_REQUEST['ext_dtd']) ?'checked' : ''); ?>></td></tr>
+                <tr><td>用 DTD 验证?</td><td><input type='checkbox' name='valid_dtd' <?php echo (isset($_REQUEST['valid_dtd']) ?'checked' : ''); ?>></td></tr>
+                <tr><td>实体引用?</td><td><input type='checkbox' name='subs_ent' <?php echo (isset($_REQUEST['subs_ent']) ?'checked' : ''); ?>></td></tr>
+                <tr><td>开启 XInclude?</td><td><input type='checkbox' name='xinclude' <?php echo (isset($_REQUEST['xinclude']) ? 'checked' : ''); ?>></td></tr>
 	</table>
-	<input type="submit" id="submit" name="submit" value="Inject!">
+	<input type="submit" id="submit" name="submit" value="注入!">
 </form>
 <div id="results">
 

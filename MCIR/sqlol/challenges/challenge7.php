@@ -24,18 +24,18 @@ You should have received a copy of the GNU General Public License along with thi
 	<hr width="40%">
 <div id="challenge">
 	
-In this challenge, no output from the query is shown, but verbose errors are shown.<br>
+In this challenge, no output from the query is shown, but 详细错误信息 are shown.<br>
 <br>
 Your objective is to find the table of social security numbers present in the database and extract its information WITHOUT deleting anything from the database.<br>
 (If you do happen to destroy the database, you can always use the <a href="../resetbutton.php">SQLol reset button</a> to bring it back to its original state.)
 
 <pre>
-PARAMETERS:
+参数:
 Query Type - DELETE query
-Injection Type - String value in WHERE clause
+注入类型: - String value in WHERE clause
 Method - POST
-Sanitization - None
-Output - No results, verbose error messages, query not shown
+过滤: - None
+输出 - No results, verbose error messages, query not shown
 </pre>
 
 </div>
@@ -44,8 +44,8 @@ Output - No results, verbose error messages, query not shown
 	<input type="hidden" name="error_level" value="errors"/>
 	<input type="hidden" name="show_query" value="off"/>
 	<input type="hidden" name="location" value="where_string"/>
-	Injection String: <input type="text" name="inject_string"/><br>
-	<input type="submit" name="submit" value="Inject!"/>
+	注入字符串: <input type="text" name="inject_string"/><br>
+	<input type="submit" name="submit" value="注入!"/>
 </form>
 <br>
 </body>

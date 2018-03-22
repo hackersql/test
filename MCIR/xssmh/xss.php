@@ -22,7 +22,7 @@ You should have received a copy of the GNU General Public License along with thi
 include('includes/nav.inc.php');
 include('../includes/options.inc.php');
 ?>
-	<tr><td>Injection Location:</td><td>
+	<tr><td>注入位置:</td><td>
 		<select name="location">
 			<option value="body">Body</option>
 			<option value="attribute_single" <?php if(isset($_REQUEST["location"]) and $_REQUEST["location"]=="attribute_single") echo "selected"; ?>>Attribute value (wrapped in single quotes)</option>
@@ -34,7 +34,7 @@ include('../includes/options.inc.php');
 		<tr><td>Custom HTML (*INJECT* specifies injection point):</td><td><textarea name="custom_inject"><?php echo (isset($_REQUEST['custom_inject']) ? htmlentities($_REQUEST['custom_inject']) : '' ); ?></textarea></td></tr>
 	<tr><td>Persistent?</td><td><input type='checkbox' name='persistent' <?php echo (isset($_REQUEST['persistent']) ? 'checked' : ''); ?>>
 	</table>
-	<input type="submit" id="submit" name="submit" value="Inject!">
+	<input type="submit" id="submit" name="submit" value="注入!">
 </form>
 <div id="results">
 

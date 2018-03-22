@@ -24,15 +24,15 @@ You should have received a copy of the GNU General Public License along with thi
 	<hr width="40%">
 <div id="challenge">
 	
-You must perform an XPath injection attack in a string field where pipes are filtered.<br>
+您必须在过滤管道的字符串字段中执行XPath注入攻击<br>
 <br>
-Your objective is to pull the user passwords from the XML document.
+您的目标是从XML文档中提取用户密码。
 
 <pre>
-PARAMETERS:
-Injection Type - String value in condition
-Sanitization - No pipes
-Output - All results, no errors, query not shown
+参数：
+注入类型 - 条件为字符串值
+过滤 - 管道符|
+输出 - 所有结果，无错误，查询不显示
 </pre>
 
 </div>
@@ -43,8 +43,8 @@ Output - All results, no errors, query not shown
 	<input type="hidden" name="sanitization_type" value="keyword">
 	<input type="hidden" name="location" value="condition_string"/>
 	<input type="hidden" name="error_level" value="none"/>
-	Injection String: <input type="text" name="inject_string"/><br>
-	<input type="submit" name="submit" value="Inject!"/>
+	注入字符串: <input type="text" name="inject_string"/><br>
+	<input type="submit" name="submit" value="注入!"/>
 </form>
 <br>
 </body>

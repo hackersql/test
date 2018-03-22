@@ -26,7 +26,7 @@ include('../includes/options.inc.php');
 
 <tr><td>Original Query (*INJECT* specifies injection point):</td><td><textarea name="location"><?php if(isset($_REQUEST["location"])) echo htmlentities($_REQUEST["location"]); ?></textarea></td></tr>
 	</table>
-<input type="submit" id="submit" name="submit" value="Inject!">
+<input type="submit" id="submit" name="submit" value="注入!">
 </form>
 <div id="results">
 

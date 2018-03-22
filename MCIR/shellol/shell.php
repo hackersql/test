@@ -23,7 +23,7 @@ You should have received a copy of the GNU General Public License along with thi
 include('includes/nav.inc.php');
 include('../includes/options.inc.php');
 ?>
-	<tr><td>Injection Location:</td><td>
+	<tr><td>注入位置:</td><td>
 		<select name="location">
 			<option value="argument">Argument</option>
 			<option value="argument_quotes" <?php if(isset($_REQUEST["location"]) and $_REQUEST["location"]=="argument_quotes") echo "selected"; ?>>Argument (wrapped in quotes)</option>
@@ -32,7 +32,7 @@ include('../includes/options.inc.php');
 		</select></td></tr>
 		<tr><td>Custom command (*INJECT* specifies injection point):</td><td><textarea name="custom_inject"><?php echo (isset($_REQUEST['custom_inject']) ? htmlentities($_REQUEST['custom_inject']) : '' ); ?></textarea></td></tr>
 	</table>
-	<input type="submit" id="submit" name="submit" value="Inject!">
+	<input type="submit" id="submit" name="submit" value="注入!">
 </form>
 <div id="results">
 

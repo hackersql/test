@@ -28,7 +28,7 @@ include('../includes/options.inc.php');
 	<tr><td><small><i>XSL processor specific options</i></small></td></tr>
 	<tr><td>Enable PHP functions?</td><td><input type="checkbox" name="php_funcs" <?php if(isset($_REQUEST["php_funcs"])) echo "checked"; ?> ></td></tr>
 	<tr><td><br/></td><td></td></tr>
-	<tr><td><b>Injection Location:</b></td><td>
+	<tr><td><b>注入位置:</b></td><td>
 		<select name="location">
 			<option value="content">Static content in output</option>
 			<option value="row" <?php echo (isset($_REQUEST['location']) and $_REQUEST['location']=='row') ? 'selected' : ''; ?>>Name of field to retrieve from XML</option>
@@ -36,7 +36,7 @@ include('../includes/options.inc.php');
 		<tr><td>Custom XSL document (*INJECT* specifies injection point):</td><td><textarea name="custom_inject"><?php echo isset($_REQUEST['custom_inject']) ? htmlentities($_REQUEST['custom_inject']) : ''; ?></textarea></td></tr>
 	<tr><td><br/></td><td></td></tr>
 	</table>
-	<input type="submit" id="submit" name="submit" value="Inject!">
+	<input type="submit" id="submit" name="submit" value="注入!">
 </form>
 <div id="results">
 

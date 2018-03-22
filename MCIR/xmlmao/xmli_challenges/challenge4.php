@@ -29,10 +29,10 @@ External entity injection (also known as "XXE") attacks allow you to read files 
 Your objective is to read /etc/passwd or c:\boot.ini using a blind XXE attack.
 
 <pre>
-PARAMETERS:
-Injection Type - Full control of xml 
-Sanitization - None
-Output - No results, verbose errors
+参数:
+注入类型: - Full control of xml 
+过滤: - None
+输出 - No results, 详细错误信息
 </pre>
 
 </div>
@@ -42,8 +42,8 @@ Output - No results, verbose errors
 	<input type="hidden" name="custom_inject" value="*INJECT*" />
 	<input type="hidden" name="ext_dtd" value="on" />
 	<input type="hidden" name="error_level" value="verbose"/>
-	Injection String: <input type="text" name="inject_string"/><br>
-	<input type="submit" name="submit" value="Inject!"/>
+	注入字符串: <input type="text" name="inject_string"/><br>
+	<input type="submit" name="submit" value="注入!"/>
 </form>
 <br>
 </body>

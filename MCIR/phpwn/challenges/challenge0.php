@@ -35,11 +35,11 @@ Lorem ipsum lolcats foobar<br>
 Your objective is to gain psychic control of a common housecat using only a tin can, a piece of cheese and weapons-grade bromium.
 
 <pre>
-PARAMETERS:
+参数:
 Injection Location - Command argument
 Method - GET
-Sanitization - None
-Output - output shown, error status disclosed, command shown
+过滤: - None
+输出 - output shown, error status disclosed, command shown
 </pre>
 
 </div>
@@ -49,8 +49,8 @@ Output - output shown, error status disclosed, command shown
         <input type="hidden" name="error_level" value="verbose"/>
         <input type="hidden" name="show_query" value="on"/>
 	<input type="hidden" name="location" value="argument"/>
-	Injection String: <input type="text" name="inject_string"/><br>
-	<input type="submit" name="submit" value="Inject!"/>
+	注入字符串: <input type="text" name="inject_string"/><br>
+	<input type="submit" name="submit" value="注入!"/>
 </form>
 <br>
 </body>

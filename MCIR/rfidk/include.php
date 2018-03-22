@@ -30,7 +30,7 @@ include('../includes/options.inc.php');
 		<tr><td><small><i>File inclusion specific options</i></small></td></tr>
 		<tr><td>Display file only:</td><td><input type="checkbox" name="no_parse" <?php if(isset($_REQUEST["no_parse"])) echo "checked"; ?> ></td></tr>
 		<tr></tr>
-	<tr><td>Injection Location:</td><td>
+	<tr><td>注入位置:</td><td>
 		<select name="location">
 			<option value="filename">Full filename</option>
 			<option value="basename" <?php if(isset($_REQUEST["location"]) and $_REQUEST["location"]=="basename") echo "selected"; ?>>File basename (&lt;your_input&gt;.ext)</option>
@@ -39,7 +39,7 @@ include('../includes/options.inc.php');
 		</select></td></tr>
 		<tr><td>Custom include path (*INJECT* specifies injection point):</td><td><textarea name="custom_inject"><?php echo (isset($_REQUEST['custom_inject']) ? htmlentities($_REQUEST['custom_inject']) : '' ); ?></textarea></td></tr>
 	</table>
-	<input type="submit" id="submit" name="submit" value="Inject!">
+	<input type="submit" id="submit" name="submit" value="注入!">
 </form>
 <div id="results">
 

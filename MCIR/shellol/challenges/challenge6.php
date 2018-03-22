@@ -30,11 +30,11 @@ You must perform a shell injection attack with a very restrictive blacklist.<br>
 Your objective is to read the contents of /etc/passwd.
 
 <pre>
-PARAMETERS:
+参数:
 Injection Location - Command argument wrapped in quotes
 Method - GET
-Sanitization - Reject(high), no semicolons, pipes, ampersands, dollar signs, parens, backticks, or newlines
-Output - Command results, errors shown, command executed is shown
+过滤: - Reject(high), no semicolons, pipes, ampersands, dollar signs, parens, backticks, or newlines
+输出 - Command results, errors shown, command executed is shown
 </pre>
 
 </div>
@@ -46,8 +46,8 @@ Output - Command results, errors shown, command executed is shown
         <input type="hidden" name="show_query" value="on"/>
 	<input type="hidden" name="custom&#95;inject" value="find&#32;&#46;&#32;&#45;name&#32;&#42;INJECT&#42;" />
 	<input type="hidden" name="sanitization_params" value="&#59;&#44;&amp;&#44;&#124;&#44;&#13;&#10;&#44;&#36;&#44;&#40;&#44;&#41;&#44;&#96;" />
-	Injection String: <input type="text" name="inject_string"/><br>
-	<input type="submit" name="submit" value="Inject!"/>
+	注入字符串: <input type="text" name="inject_string"/><br>
+	<input type="submit" name="submit" value="注入!"/>
 </form>
 <br>
 </body>

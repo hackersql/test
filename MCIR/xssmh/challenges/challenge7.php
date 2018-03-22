@@ -30,19 +30,19 @@ Your objective is to cause an alert box to pop up on the resulting page.<br>
 (Note: Some browsers have anti-XSS protections which prevent this from working. Try using Firefox, Safari, or old versions of Internet Explorer.)
 
 <pre>
-PARAMETERS:
-Injection Type - Custom, value attribute of hidden input field
-Sanitization - No right angle bracket (&gt;)
+参数:
+注入类型: - Custom, value attribute of hidden input field
+过滤: - No right angle bracket (&gt;)
 </pre>
 
 </div>
 <form action="../xss.php" method="get" name="challenge_form">
-	Injection String: <input type="text" name="inject_string"/><br>
+	注入字符串: <input type="text" name="inject_string"/><br>
       <input type="hidden" name="custom&#95;inject" value="&lt;form&gt;&#13;&#10;&lt;input&#32;&#32;value&#61;&quot;&#42;INJECT&#42;&quot;&#32;type&#61;&quot;hidden&quot;&#32;&#47;&gt;&#13;&#10;&lt;&#47;form&gt;" />
       <input type="hidden" name="sanitization&#95;level" value="reject_high" />
       <input type="hidden" name="sanitization&#95;params" value="&gt;" />
       <input type="hidden" name="sanitization&#95;type" value="keyword" />
-	<input type="submit" name="submit" value="Inject!"/>
+	<input type="submit" name="submit" value="注入!"/>
 </form>
 <br>
 </body>

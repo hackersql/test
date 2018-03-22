@@ -41,8 +41,8 @@ You should have received a copy of the GNU General Public License along with thi
 	<input type="hidden" name="show_query" value="on"/>
 	<input type="hidden" name="location" value="condition_string"/>
 	<input type="hidden" name="error_level" value="verbose"/>
-	Injection String: <input type="text" name="inject_string"/><br>
-	<input type="submit" name="submit" value="Inject!"/>
+	注入字符串: <input type="text" name="inject_string"/><br>
+	<input type="submit" name="submit" value="注入!"/>
 </form>
 <br>
 </body>

@@ -29,12 +29,12 @@ You must perform a basic Blind SQL injection attack. Only an indication of wheth
 Your objective is to find the table of social security numbers present in the database and extract its information.
 
 <pre>
-PARAMETERS:
+参数:
 Query Type - SELECT query
-Injection Type - String value in WHERE clause
+注入类型: - String value in WHERE clause
 Method - POST
-Sanitization - None
-Output - Boolean results, no error messages
+过滤: - None
+输出 - Boolean results, no error messages
 </pre>
 
 </div>
@@ -43,8 +43,8 @@ Output - Boolean results, no error messages
 	<input type="hidden" name="error_level" value="none"/>
 	<input type="hidden" name="show_query" value="on"/>
 	<input type="hidden" name="location" value="where_string"/>
-	Injection String: <input type="text" name="inject_string"/><br>
-	<input type="submit" name="submit" value="Inject!"/>
+	注入字符串: <input type="text" name="inject_string"/><br>
+	<input type="submit" name="submit" value="注入!"/>
 </form>
 <br>
 </body>

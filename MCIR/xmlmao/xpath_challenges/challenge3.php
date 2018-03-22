@@ -40,7 +40,7 @@ You should have received a copy of the GNU General Public License along with thi
 	<input type="hidden" name="query_results" value="one_row"/>
 	<input type="hidden" name="location" value="condition_string"/>
 	<input type="hidden" name="error_level" value="generic"/>
-	注射字符串: <input type="text" name="inject_string"/><br>
+	注入字符串: <input type="text" name="inject_string"/><br>
 	<input type="submit" name="submit" value="注入!"/>
 </form>
 <br>

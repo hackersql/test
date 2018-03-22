@@ -29,10 +29,10 @@ XInclude is a way of merging XML documents or creating dynamic XML content by in
 Your objective is to read /etc/passwd or c:\boot.ini using XInclude.
 
 <pre>
-PARAMETERS:
-Injection Type - CDATA-wrapped value
-Sanitization - None
-Output - Full results, verbose errors
+参数:
+注入类型: - CDATA-wrapped value
+过滤: - None
+输出 - Full results, 详细错误信息
 </pre>
 
 </div>
@@ -41,8 +41,8 @@ Output - Full results, verbose errors
       <input type="hidden" name="query&#95;results" value="all_rows" />
       <input type="hidden" name="error&#95;level" value="verbose" />
       <input type="hidden" name="xinclude" value="on" />
-	Injection String: <input type="text" name="inject_string"/><br>
-	<input type="submit" name="submit" value="Inject!"/>
+	注入字符串: <input type="text" name="inject_string"/><br>
+	<input type="submit" name="submit" value="注入!"/>
 </form>
 <br>
 </body>

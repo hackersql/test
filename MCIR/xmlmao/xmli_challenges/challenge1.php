@@ -24,15 +24,15 @@ You should have received a copy of the GNU General Public License along with thi
 	<hr width="40%">
 <div id="challenge">
 	
-This challenge requires you to insert your own data tag and prevent the original from being parsed.<br>
+这个挑战需要你插入你自己的数据标签并防止原始文件被解析。<br>
 <br>
-Your objective is to get the application to return only the value "winrar".
+您的目标是让应用程序只返回值"winrar"。
 
 <pre>
-PARAMETERS:
-Injection Type - Attribute
-Sanitization - None
-Output - All results, verbose errors, xml shown
+参数:
+注入类型: - 属性
+过滤: - 空
+输出 - 所有结果, 详细错误信息, 显示XML
 </pre>
 
 </div>
@@ -41,8 +41,8 @@ Output - All results, verbose errors, xml shown
 	<input type="hidden" name="show_query" value="on"/>
 	<input type="hidden" name="location" value="attribute"/>
 	<input type="hidden" name="error_level" value="verbose"/>
-	Injection String: <input type="text" name="inject_string"/><br>
-	<input type="submit" name="submit" value="Inject!"/>
+	注入字符串: <input type="text" name="inject_string"/><br>
+	<input type="submit" name="submit" value="注入!"/>
 </form>
 <br>
 </body>

@@ -29,12 +29,12 @@ In this challenge, you must utilize stacked queries due to the difficulty of ext
 Your objective is to create a new table called "ipwntyourdb" using stacked queries.
 
 <pre>
-PARAMETERS:
+参数:
 Query Type - SELECT query
-Injection Type - String value in WHERE clause
+注入类型: - String value in WHERE clause
 Method - POST
-Sanitization - None
-Output - All results, verbose error messages, query shown
+过滤: - None
+输出 - 所有结果, verbose error messages, query shown
 </pre>
 
 </div>
@@ -43,8 +43,8 @@ Output - All results, verbose error messages, query shown
 	<input type="hidden" name="error_level" value="none"/>
 	<input type="hidden" name="show_query" value="off"/>
 	<input type="hidden" name="location" value="where_string"/>
-	Injection String: <input type="text" name="inject_string"/><br>
-	<input type="submit" name="submit" value="Inject!"/>
+	注入字符串: <input type="text" name="inject_string"/><br>
+	<input type="submit" name="submit" value="注入!"/>
 </form>
 <br>
 </body>

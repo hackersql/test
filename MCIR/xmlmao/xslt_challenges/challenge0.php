@@ -29,10 +29,10 @@ You must perform the simplest of XSL injection attacks.<br>
 Your objective is to retrieve passwords from the XML document.
 
 <pre>
-PARAMETERS:
-Injection Type - Static content in output
-Sanitization - None
-Output - All results, verbose errors, xml shown
+参数:
+注入类型: - Static content in output
+过滤: - None
+输出 - 所有结果, 详细错误信息, 显示XML
 </pre>
 
 </div>
@@ -40,9 +40,9 @@ Output - All results, verbose errors, xml shown
       <input type="hidden" name="query&#95;results" value="all&#95;rows" />
       <input type="hidden" name="error&#95;level" value="verbose" />
       <input type="hidden" name="show&#95;query" value="on" />
-      Injection String: <input type="text" name="inject&#95;string" value="" /><br>
+      注入字符串: <input type="text" name="inject&#95;string" value="" /><br>
       <input type="hidden" name="location" value="content" />
-      <input type="submit" name="submit" value="Inject!"/>
+      <input type="submit" name="submit" value="注入!"/>
 </form>
 <br>
 </body>

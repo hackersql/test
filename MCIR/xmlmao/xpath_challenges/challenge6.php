@@ -24,15 +24,15 @@ You should have received a copy of the GNU General Public License along with thi
 	<hr width="40%">
 <div id="challenge">
 	
-You must perform an XPath injection attack injecting into a child node name where pipes and square brackets are filtered.<br>
+您必须执行XPath注入攻击，将其注入到过滤管道和方括号的子节点名称中。
 <br>
-Your objective is to retrieve the entire XML document.
+您的目标是检索整个XML文档
 
 <pre>
-PARAMETERS:
-Injection Type - Child node
-Sanitization - No pipes, no square brackets
-Output - All results, no errors, query not shown
+参数：
+注入类型 - 子节点
+过滤 - 管道符|，方括号[]
+输出 - 所有结果，无错误，查询不显示
 </pre>
 
 </div>
@@ -43,8 +43,8 @@ Output - All results, no errors, query not shown
 	<input type="hidden" name="sanitization_type" value="keyword">
 	<input type="hidden" name="location" value="sub_node"/>
 	<input type="hidden" name="error_level" value="none"/>
-	Injection String: <input type="text" name="inject_string"/><br>
-	<input type="submit" name="submit" value="Inject!"/>
+	注入字符串: <input type="text" name="inject_string"/><br>
+	<input type="submit" name="submit" value="注入!"/>
 </form>
 <br>
 </body>

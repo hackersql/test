@@ -23,7 +23,7 @@ include('includes/nav.inc.php');
 include('../includes/options.inc.php');
 ?>
 
-<tr><td>Injection Location:</td><td>
+<tr><td>注入位置:</td><td>
 	<select name="location">
 		<option value="where_string">String in WHERE clause</option>
 		<option value="where_int" <?php if(isset($_REQUEST["location"]) and $_REQUEST["location"]=="where_int") echo "selected"; ?>>Integer in WHERE clause</option>
@@ -31,7 +31,7 @@ include('../includes/options.inc.php');
 		<option value="table_name" <?php if(isset($_REQUEST["location"]) and $_REQUEST["location"]=="table_name") echo "selected"; ?>>Table Name</option>
 	</select></td></tr></table>
 	
-<input type="submit" id="submit" name="submit" value="Inject!">
+<input type="submit" id="submit" name="submit" value="注入!">
 </form>
 <div id="results">
 <?php

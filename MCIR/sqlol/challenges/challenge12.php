@@ -29,12 +29,12 @@ The contents of the database are usually considered to be trusted. Some mass att
 Your objective is to use an SQL injection flaw to execute a reflected cross-site scripting attack.
 
 <pre>
-PARAMETERS:
+参数:
 Query Type - SELECT query
-Injection Type - String value in WHERE clause
+注入类型: - String value in WHERE clause
 Method - POST
-Sanitization - None
-Output - One row, verbose error messages, query not shown
+过滤: - None
+输出 - One row, verbose error messages, query not shown
 </pre>
 
 </div>
@@ -43,8 +43,8 @@ Output - One row, verbose error messages, query not shown
 	<input type="hidden" name="error_level" value="verbose"/>
 	<input type="hidden" name="show_query" value="off"/>
 	<input type="hidden" name="location" value="where_string"/>
-	Injection String: <input type="text" name="inject_string"/><br>
-	<input type="submit" name="submit" value="Inject!"/>
+	注入字符串: <input type="text" name="inject_string"/><br>
+	<input type="submit" name="submit" value="注入!"/>
 </form>
 <br>
 </body>

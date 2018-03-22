@@ -29,12 +29,12 @@ You must perform a very basic SQL injection attack, but a primitive blacklisting
 Your objective is to find the table of social security numbers present in the database and extract its information.
 
 <pre>
-PARAMETERS:
+参数:
 Query Type - SELECT query
-Injection Type - String value in WHERE clause
+注入类型: - String value in WHERE clause
 Method - POST
-Sanitization - Blacklist filter on "low"
-Output - All results, verbose error messages, query shown
+过滤: - Blacklist filter on "low"
+输出 - 所有结果, verbose error messages, query shown
 </pre>
 
 </div>
@@ -46,8 +46,8 @@ Output - All results, verbose error messages, query shown
 	<input type="hidden" name="error_level" value="verbose"/>
 	<input type="hidden" name="show_query" value="on"/>
 	<input type="hidden" name="location" value="where_string"/>
-	Injection String: <input type="text" name="inject_string"/><br>
-	<input type="submit" name="submit" value="Inject!"/>
+	注入字符串: <input type="text" name="inject_string"/><br>
+	<input type="submit" name="submit" value="注入!"/>
 </form>
 </body>
 </html>

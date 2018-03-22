@@ -29,12 +29,12 @@ In this challenge, you are working with an ordinary SELECT query. However, this 
 Your objective is to obtain the social security numbers from the database.
 
 <pre>
-PARAMETERS:
+参数:
 Query Type - SELECT query
-Injection Type - Column name
+注入类型: - Column name
 Method - GET
-Sanitization - None
-Output - No error messages, query shown
+过滤: - None
+输出 - No error messages, query shown
 </pre>
 
 </div>
@@ -43,8 +43,8 @@ Output - No error messages, query shown
 	<input type="hidden" name="error_level" value="none"/>
 	<input type="hidden" name="show_query" value="on"/>
 	<input type="hidden" name="location" value="column_name"/>
-	Injection String: <input type="text" name="inject_string"/><br>
-	<input type="submit" name="submit" value="Inject!"/>
+	注入字符串: <input type="text" name="inject_string"/><br>
+	<input type="submit" name="submit" value="注入!"/>
 </form>
 <br>
 </body>

@@ -30,11 +30,11 @@ You must perform a simple shell command injection attack, without the use of sem
 Your objective is to read the contents of either /etc/passwd or C:\boot.ini, depending on your OS.
 
 <pre>
-PARAMETERS:
+参数:
 Injection Location - Command argument
 Method - GET
-Sanitization - Reject(high), no semicolons, ampersands, pipes, newlines, backticks
-Output - output shown, error status disclosed, command shown
+过滤: - Reject(high), no semicolons, ampersands, pipes, newlines, backticks
+输出 - output shown, error status disclosed, command shown
 </pre>
 
 </div>
@@ -46,8 +46,8 @@ Output - output shown, error status disclosed, command shown
         <input type="hidden" name="error_level" value="verbose"/>
         <input type="hidden" name="show_query" value="on"/>
 	<input type="hidden" name="location" value="argument"/>
-	Injection String: <input type="text" name="inject_string"/><br>
-	<input type="submit" name="submit" value="Inject!"/>
+	注入字符串: <input type="text" name="inject_string"/><br>
+	<input type="submit" name="submit" value="注入!"/>
 </form>
 <br>
 </body>

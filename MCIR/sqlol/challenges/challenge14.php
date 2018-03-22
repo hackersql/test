@@ -29,11 +29,11 @@ It is often said that if you have a problem you try to solve with regular expres
 Your objective is to retrieve the social security numbers from the database.
 
 <pre>
-PARAMETERS:
+参数:
 Query Type - SELECT query
-Injection Type - String value in WHERE clause
+注入类型: - String value in WHERE clause
 Method - POST
-Sanitization - Whitelist, regular expressions
+过滤: - Whitelist, regular expressions
 </pre>
 
 </div>
@@ -44,8 +44,8 @@ Sanitization - Whitelist, regular expressions
 	<input type="hidden" name="error_level" value="none"/>
 	<input type="hidden" name="show_query" value="off"/>
 	<input type="hidden" name="location" value="where_string"/>
-	Injection String: <input type="text" name="inject_string"/><br>
-	<input type="submit" name="submit" value="Inject!"/>
+	注入字符串: <input type="text" name="inject_string"/><br>
+	<input type="submit" name="submit" value="注入!"/>
 </form>
 <br>
 </body>

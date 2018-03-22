@@ -29,10 +29,10 @@ You must perform the simplest of XPath injection attacks.<br>
 Your objective is to get the query to return all usernames instead of just one.
 
 <pre>
-PARAMETERS:
-Injection Type - String value in condition
-Sanitization - None
-Output - All results, verbose errors, query shown
+参数:
+注入类型: - String value in condition
+过滤: - None
+输出 - 所有结果, 详细错误信息, query shown
 </pre>
 
 </div>
@@ -41,8 +41,8 @@ Output - All results, verbose errors, query shown
 	<input type="hidden" name="show_query" value="on"/>
 	<input type="hidden" name="location" value="condition_string"/>
 	<input type="hidden" name="error_level" value="verbose"/>
-	Injection String: <input type="text" name="inject_string"/><br>
-	<input type="submit" name="submit" value="Inject!"/>
+	注入字符串: <input type="text" name="inject_string"/><br>
+	<input type="submit" name="submit" value="注入!"/>
 </form>
 <br>
 </body>

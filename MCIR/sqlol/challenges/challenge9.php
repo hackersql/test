@@ -29,12 +29,12 @@ In this challenge, you are working with an UPDATE query. The query updates the f
 Your objective is to inject into the query and cause it to update the "isadmin" field to 1 for the user with id 3.
 
 <pre>
-PARAMETERS:
+参数:
 Query Type - UPDATE query
-Injection Type - Value to be written
+注入类型: - Value to be written
 Method - POST
-Sanitization - None
-Output - Generic error messages, query shown
+过滤: - None
+输出 - Generic error messages, query shown
 </pre>
 
 </div>
@@ -43,8 +43,8 @@ Output - Generic error messages, query shown
 	<input type="hidden" name="error_level" value="errors"/>
 	<input type="hidden" name="show_query" value="on"/>
 	<input type="hidden" name="location" value="value"/>
-	Injection String: <input type="text" name="inject_string"/><br>
-	<input type="submit" name="submit" value="Inject!"/>
+	注入字符串: <input type="text" name="inject_string"/><br>
+	<input type="submit" name="submit" value="注入!"/>
 </form>
 <br>
 </body>

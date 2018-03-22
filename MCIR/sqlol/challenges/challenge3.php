@@ -29,12 +29,12 @@ You don't always have the luxury of retrieving all rows of output from a query w
 Your objective is to find the table of social security numbers present in the database and extract its information.
 
 <pre>
-PARAMETERS:
+参数:
 Query Type - SELECT query
-Injection Type - String value in WHERE clause
+注入类型: - String value in WHERE clause
 Method - POST
-Sanitization - None
-Output - One row, verbose error messages, query not shown
+过滤: - None
+输出 - One row, verbose error messages, query not shown
 </pre>
 
 </div>
@@ -43,8 +43,8 @@ Output - One row, verbose error messages, query not shown
 	<input type="hidden" name="error_level" value="verbose"/>
 	<input type="hidden" name="show_query" value="off"/>
 	<input type="hidden" name="location" value="where_string"/>
-	Injection String: <input type="text" name="inject_string"/><br>
-	<input type="submit" name="submit" value="Inject!"/>
+	注入字符串: <input type="text" name="inject_string"/><br>
+	<input type="submit" name="submit" value="注入!"/>
 </form>
 <br>
 </body>

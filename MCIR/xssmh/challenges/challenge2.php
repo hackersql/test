@@ -30,17 +30,17 @@ Your objective is to cause an alert box to pop up on the resulting page.<br>
 (Note: Use any browser you like for this, browser based anti-XSS protections do not apply to persistent flaws.)
 
 <pre>
-PARAMETERS:
-Injection Type - Injection into HTML body
-Sanitization - None
+参数:
+注入类型: - Injection into HTML body
+过滤: - None
 </pre>
 
 </div>
 <form action="../xss.php" method="get" name="challenge_form">
 	<input type="hidden" name="location" value="body"/>
 	<input type="hidden" name="persistent" value="on"/>
-	Injection String: <input type="text" name="inject_string"/><br>
-	<input type="submit" name="submit" value="Inject!"/>
+	注入字符串: <input type="text" name="inject_string"/><br>
+	<input type="submit" name="submit" value="注入!"/>
 </form>
 <br>
 </body>

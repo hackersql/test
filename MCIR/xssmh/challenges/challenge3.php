@@ -30,9 +30,9 @@ Your objective is to cause an alert box to pop up on the resulting page.<br>
 (Note: Some browsers have anti-XSS protections which prevent this from working. Try using Firefox, Safari, or old versions of Internet Explorer.)
 
 <pre>
-PARAMETERS:
-Injection Type - Injection into HTML attribute
-Sanitization - Angle brackets are removed
+参数:
+注入类型: - Injection into HTML attribute
+过滤: - Angle brackets are removed
 </pre>
 
 </div>
@@ -41,8 +41,8 @@ Sanitization - Angle brackets are removed
 	<input type="hidden" name="sanitization_level" value="high" />
 	<input type="hidden" name="sanitization_params" value="<,>" />
 	<input type="hidden" name="sanitization_type" value="keyword" />
-	Injection String: <input type="text" name="inject_string"/><br>
-	<input type="submit" name="submit" value="Inject!"/>
+	注入字符串: <input type="text" name="inject_string"/><br>
+	<input type="submit" name="submit" value="注入!"/>
 </form>
 <br>
 </body>

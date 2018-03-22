@@ -29,12 +29,12 @@ The LIKE keyword operates similarly to the equality operator "=" in SQL database
 Your objective is to retrieve all usernames from the database.
 
 <pre>
-PARAMETERS:
+参数:
 Query Type - SELECT query
-Injection Type - String value in WHERE clause
+注入类型: - String value in WHERE clause
 Method - POST
-Sanitization - Single quotes removed
-Output - Boolean, query not shown
+过滤: - Single quotes removed
+输出 - Boolean, query not shown
 </pre>
 
 </div>
@@ -46,8 +46,8 @@ Output - Boolean, query not shown
 	<input type="hidden" name="error_level" value="none"/>
 	<input type="hidden" name="show_query" value="off"/>
 	<input type="hidden" name="location" value="select username from users where username LIKE '*INJECT*'"/>
-	Injection String: <input type="text" name="inject_string"/><br>
-	<input type="submit" name="submit" value="Inject!"/>
+	注入字符串: <input type="text" name="inject_string"/><br>
+	<input type="submit" name="submit" value="注入!"/>
 </form>
 <br>
 </body>
